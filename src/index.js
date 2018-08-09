@@ -10,11 +10,11 @@ import App from './containers/App'
 import registerServiceWorker from './registerServiceWorker';
 import 'tachyons';
 
-const logger = createLogger();
+// const logger = createLogger();
 
 const rootReducer = combineReducers({ searchRobots, requestRobots})
 
-const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger))
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware))
 
 ReactDOM.render(
     <Provider store={store} >
